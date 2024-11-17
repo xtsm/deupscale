@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: make
-      run: make
+    - name: make deupscale
+      run: make deupscale
     - name: make test
       run: make test
