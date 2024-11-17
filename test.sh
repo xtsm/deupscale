@@ -17,7 +17,7 @@ fail=""
 runtest() {
   ./deupscale "$1" "$outfile"
   set +e
-  diff="$(magick compare -metric AE "$outfile" "$2" /dev/null 2>&1)"
+  diff="$(compare -metric AE "$outfile" "$2" /dev/null 2>&1)"
   set -e
   if [ "$diff" = "0" ]
   then
