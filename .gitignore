@@ -1,0 +1,4 @@
+*.o
+*.wasm
+deupscale
+deupscale.js
