@@ -1,6 +1,6 @@
-CXX = g++
-EMCXX = em++
-CXXFLAGS = -O2 -std=c++20
+CXX := g++
+EMCXX := em++
+CXXFLAGS := $(CXXFLAGS) -O2 -std=c++20 -static
 
 all: deupscale deupscale.js
 
