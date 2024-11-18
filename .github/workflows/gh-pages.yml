@@ -35,7 +35,7 @@ jobs:
       - name: cp
         run: |
           mkdir ./_site
-          cp index.html index.js deupload.js deupload.wasm ./_site
+          cp index.html index.js deupscale.js deupscale.wasm ./_site
       - name: upload artifact
         uses: actions/upload-pages-artifact@v3
 
