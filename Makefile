@@ -1,6 +1,6 @@
 CXX := g++
 EMCXX := em++
-CXXFLAGS := $(CXXFLAGS) -O2 -std=c++20 -static
+CXXFLAGS := $(CXXFLAGS) -O2 -std=c++20
 
 all: deupscale deupscale.js
 
@@ -14,7 +14,7 @@ deupscale: deupscale.o deupscale_file.o main.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 deupscale.js: deupscale.cpp deupscale_file.cpp deupscale.h deupscale_file.h
-	$(EMCXX) $(CXXFLAGS) -o $@ -sEXPORTED_FUNCTIONS=_DeupscaleFile,_free -sEXPORTED_RUNTIME_METHODS=stringToNewUTF8 deupscale.cpp deupscale_file.cpp
+	$(EMCXX) $(CXXFLAGS) -o $@ -sEXPORTED_FUNCTIONS=_DeupscaleFile,_free -sEXPORTED_RUNTIME_METHODS=allocateUTF8 deupscale.cpp deupscale_file.cpp
 
 deupscale.o: deupscale.cpp deupscale.h
 	$(CXX) $(CXXFLAGS) -c -o $@ $<

@@ -10,8 +10,8 @@ image.addEventListener("change", async (evt) => {
   var inFile = "/input." + image.files[0].name.split(".").pop();
   var outFile = "/output.png";
   FS.writeFile(inFile, bytes);
-  var inFileEm = stringToNewUTF8(inFile);
-  var outFileEm = stringToNewUTF8(outFile);
+  var inFileEm = allocateUTF8(inFile);
+  var outFileEm = allocateUTF8(outFile);
   var result = _DeupscaleFile(inFileEm, outFileEm);
   _free(inFileEm);
   _free(outFileEm);
