@@ -22,7 +22,7 @@ A tool for reverting nearest-neighbor image upscaling.
 - Take it or leave it
 - PRs welcome lol
 
-## Build
+## Build and test
 
 Build dependencies: none. ([stb_image and stb_image_write](https://github.com/nothings/stb) are included in this repo.)
 
