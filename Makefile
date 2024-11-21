@@ -14,7 +14,7 @@ deupscale: deupscale.o deupscale_file.o main.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 deupscale.js: deupscale.cpp deupscale_file.cpp deupscale.h deupscale_file.h
-	$(EMCXX) $(CXXFLAGS) -o $@ -sEXPORTED_FUNCTIONS=_DeupscaleFile,_free -sEXPORTED_RUNTIME_METHODS=allocateUTF8 deupscale.cpp deupscale_file.cpp
+	$(EMCXX) $(CXXFLAGS) -o $@ -sMODULARIZE=1 -sEXPORTED_FUNCTIONS=_DeupscaleFile,_free -sEXPORTED_RUNTIME_METHODS=FS,allocateUTF8 deupscale.cpp deupscale_file.cpp
 
 deupscale.o: deupscale.cpp deupscale.h
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
