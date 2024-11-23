@@ -18,7 +18,7 @@ A tool for reverting nearest-neighbor image upscaling.
 - Works when the scaling factor is different on each axis
 - Will probably do nothing if the image uses lossy compression (e.g. JPEG)
 - May fail if the image has lots of equal (same color?) rows and/or columns
-- May fail on big images due to OOM
+- Web version may fail on big images due to OOM
 - Take it or leave it
 - PRs welcome lol
 
